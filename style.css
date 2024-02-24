@@ -1,0 +1,17 @@
+a {
+    line-height: 0em;
+    display: inline-block;
+    color: darkolivegreen;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-decoration: underline darkseagreen;
+    font-weight: 750;
+    padding: 25px 25px 10px;
+    margin: 0px;
+}
+
+body {
+    background-color: mintcream;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 15px 0px;
+}

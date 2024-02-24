@@ -7,16 +7,19 @@ class myHeader extends HTMLElement {
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
             <a href="about.html">About</a>
+            <link rel="stylesheet" type="text/css" href="style.css" />
         </div>
         `
-        
     }
 }
 
 class myFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        
+        <footer>
+            <p>Instagram</p>
+            <p>LinkedIn</p>
+        </footer>
         `
         
     }
