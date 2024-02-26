@@ -1,4 +1,3 @@
-
 class myHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -29,5 +28,6 @@ class myFooter extends HTMLElement {
 
 customElements.define('my-header', myHeader)
 customElements.define('my-footer', myHeader)
+customElements.define('start-pack', starterPack)
 
 
