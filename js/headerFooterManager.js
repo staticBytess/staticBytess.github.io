@@ -2,8 +2,9 @@
 class myHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <div class="topHeader">
-            <a class="active" href="index.html">Home</a>
+        <div id="topHeader">
+            <a href="index.html">Menu</a>
+            <a href="home.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
             <a href="about.html">About</a>
@@ -16,12 +17,13 @@ class myHeader extends HTMLElement {
 class myFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <footer>
-            <p>Instagram</p>
-            <p>LinkedIn</p>
-        </footer>
+        <div id="footer">
+            <footer>
+                <p>Instagram</p>
+                <p>LinkedIn</p>
+            </footer>
+        </div>
         `
-        
     }
 }
 
