@@ -33,12 +33,18 @@
 
 /*This is pointless*/
 #projLink{
+    figure{
+        width: 50%;
+        float: left;
+        text-align: center;
+    }
     width: 50%;
     float: left;
     text-align: center;
 }
 
-h1{
+
+header {
     text-align: center;
     color:peru;
 }
@@ -77,9 +83,15 @@ figcaption span{
     background-color: white;
 }
 
+/*Variable to be used for height dimension of images and videos*/
+:root{
+ --heightDim: 400px;
+}
+
+
 img{
-    width:500px; /* you can use % */
-    height: 500px;
+    width:var(--heightDim); /* you can use % */
+    height: var(--heightDim);
     padding-bottom: 0px;
     border-radius: 50px;
     border: 10px solid #837c1d;
@@ -88,7 +100,7 @@ img{
 
 video{
     width:auto; /* you can use % */
-    height: auto;
+    height: var(--heightDim);
     max-width: 500px;
     max-height: 500px;
     padding-bottom: 0px;
