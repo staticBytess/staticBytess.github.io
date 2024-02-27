@@ -3,35 +3,119 @@
     <head>
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="./js/headerFooterManager.js"></script>
-        <my-header></my-header>
         <title>Pi Car</title>
     </head>
     
-    <h1>Raspberry Pi Pico "Car"</h1>
+    <nav>
+        <script src="./js/headerFooterManager.js"></script>
+        <my-header></my-header>
+    </nav>
 
-    <body>
-        <p>Raspberry Pi Pico powered wifi-controlled “car”. <br>
-            The initial scope: Assemble and program an RC car to be controlled over a LAN connection. <br>
-            Objectives:
-        </p>
+    <header>
+        <h1>Raspberry Pi Pico "Car"</h1>
+        <hr>
+    </header>
+    
+    <main>
+        <body>
+            <p>
+                A wifi-controlled “car” powered by a Raspberry Pi Pico. <br>
+                Initial scope: Assemble and program an RC car to be controlled over a LAN connection. <br>
+                <hr>
+                <h3><u>Outcomes:</u></h3>
+                <ul>
+                    <li>Learned how to use Python to speak with motor drivers.</li>
+                    <li>Created a LAN connection with Python.</li>
+                    <li>Increased confidence working on embedded systems.</li>
+                </ul>
 
-        <video controls>
-        <source src="assets\rcCar\oneWheel.mp4">
-        </video>
-        <video controls>
-        <source src="assets\rcCar\oneMotor.mp4">
-        </video>
-        <video controls>
-        <source src="assets/rcCar/finalResult.mp4">
-        </video>
+            
+                <div id="challSol">
+                    <h3><u>Challenges and Solutions:</u></h3>
+                    <div>
+                    Challenge #1: Struggled to program the motor drivers.<br>
+                    Solution: Used libraries to help with the process.<br><br>
+                    Challenge #2: Power usage was too low for the battery pack to register and would shut off.<br>
+                    Solution: Connected an extra display I had to ensure enough power was being pulled.<br>
+                    </div>
+                </div>
 
+                <div id="process">
+                    <h3><u>Process:</u></h3>
+                    <div>
+                        Purchased the components off of Amazon, used a cardboard sheet as the frame, and a Raspberry Pi 
+                        Pico to power it all. The components consisted of: wheels, motors and drivers, batteries, and the 
+                        Pico components. Started with programming a single motor then scaled it up to handle two pairs. 
+                        Various versions were made during development, from a single wheel to a pair of wheels on a 
+                        half-sized cardboard sheet, ultimately to the final build. 
+                    </div>
+                </div>
+
+                <h3><u>Additional Notes:</u></h3>
+                <ul>
+                    <li>Steering and wheel alignment were not in the scope of this project.</li>
+                </ul>
+
+
+            </p>
+
+            <hr>
+            Photos and videos of the project: <br>
+            <figure>
+            <img src="assets\rcCar\finalBuild.jpg">
+            <!-- <figcaption>Final Build of the RC car</figcaption> -->
+            </figure>
+            
+            <figure>
+            <video controls>
+            <source src="assets\rcCar\oneWheel.mp4">
+            <figcaption>One Wheel, One Motor Test</figcaption>
+            </video>
+            
+        </figure>
+        <figure>
+            <video controls>
+            <source src="assets\rcCar\oneMotor.mp4">
+            </video>
+        </figure>
+        <figure>
+            <video controls>
+            <source src="assets/rcCar/finalResult.mp4">
+            </video>
+        </figure>
         
-    </body>
+        <!-- Same as above but without figure tag
+            
+            <img src="assets\rcCar\finalBuild.jpg">
+        
+            <video controls>
+                <source src="assets\rcCar\oneWheel.mp4">
+                <figcaption>One Wheel, One Motor Test</figcaption>
+                </video>
+                
+        
+                <video controls>
+                <source src="assets\rcCar\oneMotor.mp4">
+                </video>
+         
+                <video controls>
+                <source src="assets/rcCar/finalResult.mp4">
+                </video>
+        -->
 
-    <img src="assets\rcCar\finalBuild.jpg">
+            
+        </body>
+    </main>
 
     <style>
+       #challSol {
+            div{
+                margin-left: 30px;
+            }
+            h3{
+                text-align: left;
+            }
+        }
         body{
             text-align: left;
         }
@@ -39,10 +123,16 @@
             border: 0px;
             border-radius: 10px;
         }
+        h3{
+            margin-bottom: 0px;
+        }
+        ul{
+            margin-top: 0px;
+        }
     </style>
 
-<footer>
-    <my-footer></my-footer>
-</footer>
+    <footer>
+        <my-footer></my-footer>
+    </footer>
 
 </html>
