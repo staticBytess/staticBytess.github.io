@@ -16,10 +16,9 @@ class myHeader extends HTMLElement {
 class myFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <div id="footer">
+        <div id="myfooter">
             <footer>
-                <p>Instagram</p>
-                <p>LinkedIn</p>
+                <p>Created and maintained by David Vigil</p>
             </footer>
         </div>
         `
@@ -27,7 +26,7 @@ class myFooter extends HTMLElement {
 }
 
 customElements.define('my-header', myHeader)
-customElements.define('my-footer', myHeader)
+customElements.define('my-footer', myFooter)
 customElements.define('start-pack', starterPack)
 
 

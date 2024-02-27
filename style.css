@@ -11,14 +11,10 @@
     }
 }
 
-h1{
-    text-align: center;
-    color:peru;
-}
-
-a {
-    color:rgb(139, 177, 85);
-    font-size: large;
+#myfooter{
+    p{
+        text-align: right;
+    }
 }
 
 #homeMenu{
@@ -35,7 +31,26 @@ a {
     }
 }
 
+/*This is pointless*/
+#projLink{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
 
+h1{
+    text-align: center;
+    color:peru;
+}
+
+h2 {
+    line-height: 35px;
+}
+
+a {
+    color:rgb(139, 177, 85);
+    font-size: large;
+}
 
 body {
     background-color: mintcream;
@@ -48,11 +63,14 @@ body {
 }
 
 figure{
+    display: inline-block;
+    align-items: center;
     text-align: center;
 }
 
 figcaption {
     font-size: 25px;
+    padding-bottom: 60px;
 }
 
 figcaption span{
@@ -60,12 +78,20 @@ figcaption span{
 }
 
 img{
+    width:500px; /* you can use % */
+    height: 500px;
+    padding-bottom: 0px;
+    border-radius: 50px;
+    border: 10px solid #837c1d;
+    object-fit: cover;
+}
+
+video{
     width:auto; /* you can use % */
     height: auto;
     max-width: 500px;
     max-height: 500px;
     padding-bottom: 0px;
-    border-radius: 50px;
 }
 
 p{
