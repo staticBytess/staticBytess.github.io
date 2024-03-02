@@ -90,6 +90,11 @@ header {
     text-align: center;
     color:peru;
 }
+h1{
+    font-size: 35px;
+    padding: 0px 0px 30px;
+    align-content: center;
+}
 
 h2 {
     line-height: 35px;
