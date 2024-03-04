@@ -25,21 +25,23 @@
 
 #introduction{
 
+    display: flex;
+    text-align: center;
+   
     p{
-        /* float: left; */
-        text-align: left;
         font-size: large;
-        padding: 0px 50px 250px;
-        max-width: 850px;
-        width: auto\9;
-        min-width: 150px;
+        padding: 0px 50px 150px;
+        max-width: 450px;
+        min-width: 250px;
         
         
     }
+    #profile-pic{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
     img{
-        margin-left: 100px;
-        margin-right:50px ;
-        float: left;
+        min-width: 250px;
         max-width: 100%;
         width: auto\9;
         height: auto;
@@ -50,6 +52,13 @@
 padding-bottom: 50px;
 }
 
+
+
+#project-icons{
+   
+}
+
+/*No longer used*/
 #homeMenu{
     display: grid;
     text-align: center;
@@ -62,18 +71,6 @@ padding-bottom: 50px;
         color:rgb(212, 170, 63);
         font-size: inherit;
     }
-}
-
-/*This is pointless*/
-#projLink{
-    figure{
-        width: 50%;
-        float: left;
-        text-align: center;
-    }
-    width: 50%;
-    float: left;
-    text-align: center;
 }
 
 #socials{
@@ -95,6 +92,7 @@ padding-bottom: 50px;
 header {
     text-align: center;
     color:peru;
+    line-height: 45px;
     
 }
 h1{
@@ -132,14 +130,8 @@ figure{
 figcaption {
     font-size: 25px;
     padding-bottom: 60px;
+   
 }
-
-figcaption span{
-    background-color: white;
-}
-
-
-
 
 img{
     width:var(--heightDim); /* you can use % */
