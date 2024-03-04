@@ -26,18 +26,16 @@
 #introduction{
 
     display: flex;
-    text-align: center;
-   
+    text-align: left;
+    justify-content: center;
     p{
         font-size: large;
-        padding: 0px 50px 150px;
+        padding: 0px 0px 150px;
         max-width: 450px;
         min-width: 250px;
-        
-        
     }
     #profile-pic{
-        margin-left: 50px;
+        margin-left: 0px;
         margin-right: 50px;
     }
     img{
