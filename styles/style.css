@@ -89,19 +89,25 @@ padding-bottom: 50px;
 
 header {
     text-align: center;
-    color:peru;
     line-height: 45px;
     
 }
 h1{
+    color:peru;
     margin-top: 0;
     font-size: 35px;
     padding: 0px 0px 30px;
-    align-content: center;
+    text-align: center;
 }
 
 h2 {
     line-height: 35px;
+}
+
+hr {
+    height: 1px;
+    color: #333;
+    background-color: black;
 }
 
 a {
