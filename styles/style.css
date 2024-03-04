@@ -6,7 +6,6 @@
 
 #topHeader {
     text-align: right;
-    
     a {
     display: inline-block;
     color: darkolivegreen;
@@ -22,6 +21,33 @@
     p{
         text-align: right;
     }
+}
+
+#introduction{
+
+    p{
+        /* float: left; */
+        text-align: left;
+        font-size: large;
+        padding: 0px 50px 250px;
+        max-width: 850px;
+        width: auto\9;
+        min-width: 150px;
+        
+        
+    }
+    img{
+        margin-left: 100px;
+        margin-right:50px ;
+        float: left;
+        max-width: 100%;
+        width: auto\9;
+        height: auto;
+        border-radius: 50px;
+        border: 10px solid #244691;
+        object-fit:contain;
+}
+padding-bottom: 50px;
 }
 
 #homeMenu{
@@ -69,8 +95,10 @@
 header {
     text-align: center;
     color:peru;
+    
 }
 h1{
+    margin-top: 0;
     font-size: 35px;
     padding: 0px 0px 30px;
     align-content: center;
@@ -128,8 +156,4 @@ video{
     max-width: 500px;
     max-height: 500px;
     padding-bottom: 0px;
-}
-
-p{
-    text-align: left;
 }
