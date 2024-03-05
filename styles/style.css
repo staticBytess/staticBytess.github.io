@@ -10,7 +10,6 @@
 }
 
 /*Animation Functions*/
-
 @keyframes slide-in-top {
     0%{
         transform: translateY(-100px);
@@ -54,6 +53,16 @@
     }
 }
 
+@keyframes visible-appear{
+    from {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
 /*Utility Clases*/
 .animate {
     animation-duration: 1.25s;
@@ -61,7 +70,8 @@
     animation-delay: .5s;
 }
 .animate--fast{
-    animation-duration: .9s;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.13,.7,.19,.17);
     animation-delay: .05s;
 }
 
@@ -144,7 +154,11 @@
 }
 
 .logos {
-    animation-name: slide-in-right;
+    animation-name: visible-appear;
+    animation-duration: 1.5s;
+    animation-delay: 1.35s;
+    animation-fill-mode: backwards;
+    transition: transform 0.25s ease-out;
 
     /* transition-property: transform;
     transition-duration: 0.4s;
@@ -206,12 +220,7 @@
             padding-right: var(--blockPad);
             
         }
-    
-    
 }
-
-
-
 
 .slide-in-top{
     animation-name: slide-in-top;
