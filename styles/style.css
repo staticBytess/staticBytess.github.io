@@ -74,6 +74,18 @@
         max-height: var(--logoSize);
         border: none;
     }
+    
+}
+
+.logos {
+    transition: transform 0.3s ease-out;
+    /* transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function:ease-out; */
+}
+
+.logos:hover{
+    transform: translateY(-5px);
 }
 
 #project-list{
@@ -131,22 +143,16 @@
     
 }
 
-/*No longer used*/
-#homeMenu{
-    display: grid;
-    text-align: center;
-    font-size: 50px;
-    line-height: 180px;
-    font-family:'Franklin Gothic Medium', 
-    'Arial Narrow', Arial, sans-serif;
-    
-    a{
-        color:rgb(212, 170, 63);
-        font-size: inherit;
+
+@keyframes slide-in-top {
+    from{
+        transform: translateY(-150px);
+    }
+
+    to{
+        transform: translateY(0px);
     }
 }
-
-
 
 header {
     text-align: center;

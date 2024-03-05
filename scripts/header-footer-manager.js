@@ -2,10 +2,10 @@ class myHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <div id="socials">
-                <a href="https://github.com/staticBytess">
+                <a class="logos" href="https://github.com/staticBytess">
                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png">
                 </a>
-                <a href="https://www.linkedin.com/in/david-vigil-1753282b6">
+                <a class="logos" href="https://www.linkedin.com/in/david-vigil-1753282b6">
                     <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png">
                 </a>
             </div>
