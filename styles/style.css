@@ -3,7 +3,7 @@
     --heightDim: 400px;
     --logoSize: 50px;
     --blockSize: 350px;
-    --blockPad: 15px;
+    --blockPad: 10px;
 }
 
 #topHeader {
@@ -82,24 +82,29 @@
         width: 100%;
     }
     
+    
 }
 
 .project-blocks{
         border: 5px solid cadetblue;
         background-color: #b5c588;
         max-width: 650px;
+        min-width: var(--blockSize);
         max-height: 650px;
         border-radius: 30px;
         display: flex;
         flex-wrap: wrap;
-        margin: 15px;
-         color: rgb(55, 45, 119);
+        margin: var(--blockPad);
+        color: rgb(55, 45, 119);
+        margin: 0px auto;
+        width: 50%;
+        margin-bottom: 50px;
+
+        
 
         h2 {
             margin: 10px var(--blockPad);
             width: 100%;
-           
-            
         }
 
         img{
@@ -109,7 +114,7 @@
             height: var(--blockSize);
             padding: none;
             object-fit: cover;
-            margin: 0px 0px 10px 10px;
+            margin: 0px 10px 10px 10px;
         }
         a{
             text-decoration: none;
