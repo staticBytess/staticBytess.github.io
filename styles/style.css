@@ -9,17 +9,65 @@
     --main-txt-color: darkslateblue; 
 }
 
+/*Animation Functions*/
+
+@keyframes slide-in-top {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    60%{
+        opacity: 0.3;
+    }
+    80%{
+        opacity: 0.6;
+        }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    from{
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    from{
+        transform: translateX(+200px);
+        color: var(--bckgrnd-color);
+    }
+
+    to{
+        transform: translateX(0px);
+        color: var(--main-txt-color);
+    }
+}
+
 /*Utility Clases*/
 .animate {
     animation-duration: 1.25s;
     animation-fill-mode: both;
+    animation-delay: .5s;
 }
 .animate--fast{
-    animation-duration: 1s;
+    animation-duration: .9s;
+    animation-delay: .05s;
 }
 
 .animate--slow {
     animation-duration: 1.5s;
+    animation-delay: .5s;
 }
 
 
@@ -97,8 +145,6 @@
 
 .logos {
     animation-name: slide-in-right;
-    animation-duration: 1.5s;
-    transition: transform 0.3s ease-out;
 
     /* transition-property: transform;
     transition-duration: 0.4s;
@@ -165,45 +211,11 @@
 }
 
 
-@keyframes slide-in-top {
-    from{
-        transform: translateY(-150px);
-        color: var(--bckgrnd-color);
-    }
 
-    to{
-        transform: translateY(0px);
-        color: var(--header-color);
-    }
-}
-
-@keyframes slide-in-left {
-    from{
-        transform: translateX(-150px);
-        visibility: hidden;
-    }
-
-    to{
-        transform: translateX(0px);
-        visibility: visible;
-    }
-}
-
-@keyframes slide-in-right {
-    from{
-        transform: translateX(+150px);
-        color: var(--bckgrnd-color);
-    }
-
-    to{
-        transform: translateX(0px);
-        color: var(--main-txt-color);
-    }
-}
 
 .slide-in-top{
     animation-name: slide-in-top;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
 }
 
 .slide-in-left {
@@ -222,8 +234,8 @@ header {
 }
 h1{
     color:var(--header-color);
-    margin-top: 0;
-    font-size: 35px;
+    margin-top: 5px;
+    font-size: 55px;
     padding: 0px 0px 30px;
     text-align: center;
 }
