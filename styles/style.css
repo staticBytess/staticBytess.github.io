@@ -7,15 +7,15 @@
 }
 
 #topHeader {
-    text-align: right;
+    text-align: left;
     a {
     display: inline-block;
     color: darkolivegreen;
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 27px;
     font-weight:600;
     text-decoration: underline darkseagreen;
-    padding: 10px 50px  25px;
+    padding: 18px 25px  15px;
     }
 }
 
@@ -30,6 +30,7 @@
     display: flex;
     text-align: left;
     justify-content: center;
+    padding-bottom: 150px;
     p{
         font-size: large;
         padding: 0px 0px 150px;
