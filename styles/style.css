@@ -1,4 +1,4 @@
-/*Variable to be used for height dimension of images and videos*/
+/*Global variables*/
 :root{
     --heightDim: 350px;
     --logoSize: 50px;
@@ -8,6 +8,21 @@
     --header-color: peru;
     --main-txt-color: darkslateblue; 
 }
+
+/*Utility Clases*/
+.animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.animate--fast{
+    animation-duration: 0.5s;
+}
+
+.animate--slow {
+    animation-duration: 1.5s;
+}
+
+
 
 #topHeader {
     text-align: left;
@@ -159,9 +174,12 @@
     }
 }
 
-.page-title{
+@keyframes slide-in-left {
+    
+}
+
+.slide-in-top{
     animation-name: slide-in-top;
-    animation-duration: 1.5s;
     animation-timing-function: ease-out;
     
 }
