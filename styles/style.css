@@ -86,7 +86,7 @@
 .project-blocks{
         border: 5px solid cadetblue;
         background-color: #b5c588;
-        max-width: 650px;
+        max-width: 450px;
         min-width: var(--blockSize);
         max-height: 650px;
         border-radius: 30px;
@@ -112,15 +112,18 @@
             height: var(--heightDim);
             padding: none;
             object-fit: cover;
-            margin: 0px 10px 10px 10px;
+            margin: 0px 10px 0px 10px;
         }
         a{
             text-decoration: none;
             color: inherit;
+
         }
 
         p{
+            margin-top: 0px;
             padding-left: var(--blockPad);
+            padding-right: var(--blockPad);
             
         }
     
