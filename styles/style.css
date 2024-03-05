@@ -4,6 +4,9 @@
     --logoSize: 50px;
     --blockSize: 380px;
     --blockPad: 10px;
+    --bckgrnd-color: mintcream;
+    --header-color: peru;
+    --main-txt-color: darkslateblue; 
 }
 
 #topHeader {
@@ -147,11 +150,20 @@
 @keyframes slide-in-top {
     from{
         transform: translateY(-150px);
+        color: var(--bckgrnd-color);
     }
 
     to{
         transform: translateY(0px);
+        color: var(--header-color);
     }
+}
+
+.page-title{
+    animation-name: slide-in-top;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    
 }
 
 header {
@@ -160,7 +172,7 @@ header {
     
 }
 h1{
-    color:peru;
+    color:var(--header-color);
     margin-top: 0;
     font-size: 35px;
     padding: 0px 0px 30px;
@@ -183,9 +195,9 @@ a {
 }
 
 body {
-    background-color: mintcream;
+    background-color: var(--bckgrnd-color);
     font-family:Arial, Helvetica, sans-serif;
-    color: darkslateblue;
+    color: var(--main-txt-color);
     font-size: 15px;
     font-weight: 600;
     padding: 15px 0px;
