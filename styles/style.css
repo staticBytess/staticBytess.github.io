@@ -11,11 +11,11 @@
 
 /*Utility Clases*/
 .animate {
-    animation-duration: 1s;
+    animation-duration: 1.25s;
     animation-fill-mode: both;
 }
 .animate--fast{
-    animation-duration: 0.5s;
+    animation-duration: 1s;
 }
 
 .animate--slow {
@@ -96,7 +96,10 @@
 }
 
 .logos {
+    animation-name: slide-in-right;
+    animation-duration: 1.5s;
     transition: transform 0.3s ease-out;
+
     /* transition-property: transform;
     transition-duration: 0.4s;
     transition-timing-function:ease-out; */
@@ -175,13 +178,41 @@
 }
 
 @keyframes slide-in-left {
-    
+    from{
+        transform: translateX(-150px);
+        visibility: hidden;
+    }
+
+    to{
+        transform: translateX(0px);
+        visibility: visible;
+    }
+}
+
+@keyframes slide-in-right {
+    from{
+        transform: translateX(+150px);
+        color: var(--bckgrnd-color);
+    }
+
+    to{
+        transform: translateX(0px);
+        color: var(--main-txt-color);
+    }
 }
 
 .slide-in-top{
     animation-name: slide-in-top;
     animation-timing-function: ease-out;
-    
+}
+
+.slide-in-left {
+    animation-name: slide-in-left;
+    animation-timing-function: ease-out;
+}
+.slide-in-right {
+    animation-name: slide-in-right;
+    animation-timing-function: ease-out;
 }
 
 header {
