@@ -1,8 +1,8 @@
 /*Variable to be used for height dimension of images and videos*/
 :root{
-    --heightDim: 400px;
+    --heightDim: 350px;
     --logoSize: 50px;
-    --blockSize: 350px;
+    --blockSize: 380px;
     --blockPad: 10px;
 }
 
@@ -41,6 +41,7 @@
         margin-right: 50px;
     }
     img{
+        align-content: center;
         min-width: 250px;
         max-width: 100%;
         width: auto\9;
@@ -50,7 +51,6 @@
         object-fit:contain;
     }
 }
-
 
 #project-icons{
    img{
@@ -81,8 +81,6 @@
     h1{
         width: 100%;
     }
-    
-    
 }
 
 .project-blocks{
@@ -110,8 +108,8 @@
         img{
             border: 5px solid cadetblue;
             border-radius: 25px;
-            width: var(--blockSize);
-            height: var(--blockSize);
+            width: var(--heightDim);
+            height: var(--heightDim);
             padding: none;
             object-fit: cover;
             margin: 0px 10px 10px 10px;
@@ -123,6 +121,7 @@
 
         p{
             padding-left: var(--blockPad);
+            
         }
     
     
@@ -163,9 +162,9 @@ h2 {
 }
 
 hr {
-    height: 1px;
+    height: 3px;
     color: #333;
-    background-color: black;
+    background-color:#244691;
 }
 
 a {
