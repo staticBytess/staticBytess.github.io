@@ -2,6 +2,8 @@
 :root{
     --heightDim: 400px;
     --logoSize: 50px;
+    --blockSize: 350px;
+    --blockPad: 15px;
 }
 
 #topHeader {
@@ -46,29 +48,15 @@
         border-radius: 50px;
         border: 10px solid #244691;
         object-fit:contain;
+    }
 }
-padding-bottom: 50px;
-}
-
 
 
 #project-icons{
-   
-}
-
-/*No longer used*/
-#homeMenu{
-    display: grid;
-    text-align: center;
-    font-size: 50px;
-    line-height: 180px;
-    font-family:'Franklin Gothic Medium', 
-    'Arial Narrow', Arial, sans-serif;
-    
-    a{
-        color:rgb(212, 170, 63);
-        font-size: inherit;
-    }
+   img{
+    border: 10px solid #4c7044;;
+    border-radius: 50px;
+   }
 }
 
 #socials{
@@ -86,6 +74,71 @@ padding-bottom: 50px;
         border: none;
     }
 }
+
+#project-list{
+    display: flex;
+    flex-wrap: wrap;
+    h1{
+        width: 100%;
+    }
+    
+}
+
+.project-blocks{
+        border: 5px solid cadetblue;
+        background-color: #b5c588;
+        max-width: 650px;
+        max-height: 650px;
+        border-radius: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 15px;
+         color: rgb(55, 45, 119);
+
+        h2 {
+            margin: 10px var(--blockPad);
+            width: 100%;
+           
+            
+        }
+
+        img{
+            border: 5px solid cadetblue;
+            border-radius: 25px;
+            width: var(--blockSize);
+            height: var(--blockSize);
+            padding: none;
+            object-fit: cover;
+            margin: 0px 0px 10px 10px;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        p{
+            padding-left: var(--blockPad);
+        }
+    
+    
+}
+
+/*No longer used*/
+#homeMenu{
+    display: grid;
+    text-align: center;
+    font-size: 50px;
+    line-height: 180px;
+    font-family:'Franklin Gothic Medium', 
+    'Arial Narrow', Arial, sans-serif;
+    
+    a{
+        color:rgb(212, 170, 63);
+        font-size: inherit;
+    }
+}
+
+
 
 header {
     text-align: center;
@@ -141,8 +194,6 @@ img{
     width:var(--heightDim); /* you can use % */
     height: var(--heightDim);
     padding-bottom: 0px;
-    border-radius: 50px;
-    border: 10px solid #4c7044;
     object-fit: cover;
 }
 
