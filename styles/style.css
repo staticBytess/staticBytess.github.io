@@ -155,7 +155,8 @@
     justify-content: center;
     min-height: 100vh;
     p{
-        font-size: large;
+        font-size: 22px;
+        line-height: 28px;
         padding: 0px;
         max-width: 450px;
         min-width: 250px;
