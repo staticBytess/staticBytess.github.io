@@ -106,10 +106,10 @@
     display: flex;
     text-align: left;
     justify-content: center;
-    padding-bottom: 150px;
+    height: 100vh;
     p{
         font-size: large;
-        padding: 0px 0px 150px;
+        padding: 0px;
         max-width: 450px;
         min-width: 250px;
     }
