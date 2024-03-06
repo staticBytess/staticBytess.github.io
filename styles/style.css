@@ -79,7 +79,7 @@
     0%,
     100% {
         opacity: 0;
-        transform: translateY(+80px);
+        transform: translateY(+20px);
     }
 
     70%{
@@ -105,8 +105,8 @@
     animation-delay: .5s;
 }
 .animate--super--slow{
-    animation-duration: 1.5s;
-    animation-delay: 4s;
+    animation-duration: 4.5s;
+    animation-delay: 2s;
 }
 
 .slide-in-top{
@@ -155,8 +155,8 @@
     justify-content: center;
     min-height: 100vh;
     p{
-        font-size: 22px;
-        line-height: 28px;
+        font-size: 21px;
+        line-height: 26px;
         padding: 0px;
         max-width: 450px;
         min-width: 250px;
@@ -180,12 +180,19 @@
 #instruct-down{
     position: fixed;
     bottom: 0;
-    animation-delay: 1s;
     animation: visible-appear-loop infinite;
     animation-duration: 4.5s;
-    animation-delay: 3.5s;
-    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-timing-function: linear;
     animation-fill-mode: backwards;   
+}
+
+#project-list{
+    display: flex;
+    flex-wrap: wrap;
+    h1{
+        width: 100%;
+    }
 }
 
 #project-icons{
@@ -218,30 +225,21 @@
     animation-delay: 1.35s;
     animation-fill-mode: backwards;
     transition: transform 0.25s ease-out;
-
-    /* transition-property: transform;
-    transition-duration: 0.4s;
-    transition-timing-function:ease-out; */
 }
 
 .logos:hover{
     transform: translateY(-5px);
 }
 
-#project-list{
-    display: flex;
-    flex-wrap: wrap;
-    h1{
-        width: 100%;
-    }
-}
+
 
 .project-blocks{
         border: 5px solid cadetblue;
         background-color: #b5c588;
+        /*background-color: rgb(143, 205, 207);*/
         max-width: 450px;
         min-width: var(--blockSize);
-        max-height: 650px;
+        max-height: 500px;
         border-radius: 30px;
         display: flex;
         flex-wrap: wrap;
@@ -252,8 +250,6 @@
         margin-bottom: 50px;
         text-align: center;
         justify-content: center;
-
-        
 
         h2 {
             margin: 10px var(--blockPad);
