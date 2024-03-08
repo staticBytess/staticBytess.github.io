@@ -1,104 +1,123 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="styles\style.css"/>
-        <title>Home</title>
-    </head>
 
-    <nav>
-        <script src="scripts\header-footer-manager.js"></script>
-        <div id="topHeader">
-            <!-- <a href="projects.html">MY PROJECTS</a> -->
-            <my-header></my-header>    
-        </div>
-    </nav>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles\style.css" />
+    <title>Home</title>
+</head>
 
-    <br><br><br>
-    <header>
-        <h1 class="animate slide-in-top animate--fast">Hello, World!</h1>
-    </header>
+<nav>
+    <script src="scripts\header-footer-manager.js"></script>
+    <script src="scripts/instruct-scroll.js"></script>
+    <div id="topHeader">
+        <!-- <a href="projects.html">MY PROJECTS</a> -->
+        <my-header></my-header>
+    </div>
+</nav>
 
-    <main>
-        <body>
-            <div id="introduction">
-                <div id="profile-pic">
-                    <img class="animate slide-in-left" src="assets\pro-pic.jpg">
-                </div>
-                <p class="animate slide-in-right animate--slow">
-                    I am David Vigil, a dedicated computer science student.
-                    Currently I am pursuing my bachelor's degree at CSU Sacramento, 
-                    where I am slated to graduate in December 2025. <br><br>
-                    My professional aspirations lie within software engineering, 
-                    driven by an interest in both information security and embedded systems.<br>
-                    This digital portfolio encompasses a diverse array of projects, 
-                    each crafted to blend software with practical applications.
+<br><br><br>
+<header>
+    <h1 class="animate slide-in-top animate--fast">Hello, World!</h1>
+</header>
+
+<main>
+
+    <body>
+        <div id="introduction">
+            <div id="profile-pic">
+                <img class="animate slide-in-left" src="assets\pro-pic.jpg">
+            </div>
+            <p class="animate slide-in-right animate--slow">
+                I am David Vigil, a dedicated computer science student.
+                Currently I am pursuing my bachelor's degree at CSU Sacramento,
+                where I am slated to graduate in December 2025. <br><br>
+                My professional aspirations lie within software engineering,
+                driven by an interest in both information security and embedded systems.<br>
+                This digital portfolio encompasses a diverse array of projects,
+                each crafted to blend software with practical applications.
+            </p>
+            <div id="instruct-down" class="instruct-down-animate">
+                <p>
+                    scroll for more
                 </p>
-                <div id="instruct-down">
-                    <p class="animate slide-in-bottom">
-                        scroll for more
-                    </p>
-                </div>
+            </div>
+        </div>
+
+        <script>
+            const instruct = document.querySelector("#instruct-down");
+            let lastScrollY = window.scrollY;
+
+            window.addEventListener("scroll", () => {
+                if (lastScrollY != window.scrollY) {
+                    instruct.classList.remove("instruct-down-animate");
+                    instruct.classList.add("instruct--hidden");
+
+                } else {
+                    instruct.classList.add("instruct-down-animate")
+                    instruct.classList.remove("instruct--hidden");
+                }
+            })
+
+        </script>
+
+
+        <hr>
+
+        <div id="project-list">
+            <h1>Recent Projects</h1>
+
+
+            <div class="project-blocks">
+
+                <h2>Raspbery Pi RC "car"</h2>
+
+                <a href="pi-car.html">
+                    <img src="assets\rcCar\finalBuild.jpg">
+                </a>
+
+                <p>
+                    A wifi-controlled “car” powered by a Raspberry Pi Pico
+                    and controlled over a LAN connection.
+                </p>
             </div>
 
-            <hr>
 
-            <div id="project-list">
-                <h1>Recent Projects</h1>
+            <div class="project-blocks">
 
-               
-                <div class="project-blocks">
-                    
-                    <h2>Raspbery Pi RC "car"</h2>
-                
-                    <a href="pi-car.html">
-                        <img src="assets\rcCar\finalBuild.jpg">
-                    </a>
-                
-                        <p>
-                            A wifi-controlled “car” powered by a Raspberry Pi Pico 
-                            and controlled over a LAN connection.
-                        </p>
-                </div>
-            
-                
-                <div class="project-blocks">
+                <h2>Portfolio Website</h2>
+                <a href="website.html">
+                    <img src="assets\other-projs\webpage-code.png">
+                </a>
 
-                    <h2>Portfolio Website</h2>
-                    <a href="website.html">
-                        <img src="assets\other-projs\webpage-code.png">
-                    </a>
-                    
-                        <p>
-                            A technical challenge as well as a writing 
-                            and art design challenge all packed into one project.
-                        </p>
-                </div>
-
-                <div class="project-blocks">
-                    <h2>Reaction Time Game</h2>
-                    <a href="led-game.html">
-                        <img src="assets\other-projs\led-closeup.jpg">
-                    </a>
-                    
-                        <p>
-                            A game where three LED bulbs are randomly lit and the user 
-                            is timed on how long they take to press the correct button.
-                        </p>
-                </div>
-
-                
-
+                <p>
+                    A technical challenge as well as a writing
+                    and art design challenge all packed into one project.
+                </p>
             </div>
 
-           
-        </body>
-    </main>
+            <div class="project-blocks">
+                <h2>Reaction Time Game</h2>
+                <a href="led-game.html">
+                    <img src="assets\other-projs\led-closeup.jpg">
+                </a>
 
-    
+                <p>
+                    A game where three LED bulbs are randomly lit and the user
+                    is timed on how long they take to press the correct button.
+                </p>
+            </div>
+        </div>
 
-    <footer>
-        <my-footer></my-footer>
-    </footer>
+
+    </body>
+</main>
+
+
+
+<footer>
+    <my-footer></my-footer>
+</footer>
+
 </html>

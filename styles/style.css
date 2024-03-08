@@ -1,88 +1,90 @@
 /*Global variables*/
-:root{
+:root {
     --heightDim: 350px;
     --logoSize: 50px;
     --blockSize: 380px;
     --blockPad: 10px;
     --bckgrnd-color: mintcream;
     --header-color: peru;
-    --main-txt-color: darkslateblue; 
+    --main-txt-color: darkslateblue;
 }
 
 /*Animation Functions*/
 @keyframes slide-in-top {
-    0%{
+    0% {
         transform: translateY(-100px);
         opacity: 0;
     }
 
-    60%{
+    60% {
         opacity: 0.3;
     }
-    80%{
-        opacity: 0.6;
-        }
 
-    100%{
+    80% {
+        opacity: 0.6;
+    }
+
+    100% {
         transform: translateY(0px);
         opacity: 1;
     }
 }
 
 @keyframes slide-in-bottom {
-    from{
+    from {
         transform: translateY(+200px);
         opacity: 0;
     }
 
-    to{
+    to {
         transform: translateY(0px);
         color: var(--main-txt-color);
     }
 }
 
 @keyframes slide-in-left {
-    from{
+    from {
         transform: translateX(-150px);
         opacity: 0;
     }
 
-    to{
+    to {
         transform: translateX(0px);
         opacity: 1;
     }
 }
 
 @keyframes slide-in-right {
-    from{
+    from {
         transform: translateX(+200px);
         color: var(--bckgrnd-color);
     }
 
-    to{
+    to {
         transform: translateX(0px);
         color: var(--main-txt-color);
     }
 }
 
-@keyframes visible-appear{
+@keyframes visible-appear {
     from {
         opacity: 0;
     }
 
-    to{
+    to {
         opacity: 1;
     }
 }
 
-@keyframes visible-appear-loop{
+@keyframes visible-appear-loop {
+
     0%,
     100% {
         opacity: 0;
         transform: translateY(+20px);
     }
 
-    70%{
+    70% {
         opacity: .85;
         transform: translateY(-20px);
     }
@@ -94,9 +96,10 @@
     animation-fill-mode: both;
     animation-delay: .5s;
 }
-.animate--fast{
+
+.animate--fast {
     animation-duration: 1s;
-    animation-timing-function: cubic-bezier(.13,.7,.19,.17);
+    animation-timing-function: cubic-bezier(.13, .7, .19, .17);
     animation-delay: .05s;
 }
 
@@ -104,12 +107,13 @@
     animation-duration: 1.5s;
     animation-delay: .5s;
 }
-.animate--super--slow{
+
+.animate--super--slow {
     animation-duration: 4.5s;
     animation-delay: 2s;
 }
 
-.slide-in-top{
+.slide-in-top {
     animation-name: slide-in-top;
     animation-timing-function: ease-in-out;
 }
@@ -124,48 +128,61 @@
     animation-name: slide-in-left;
     animation-timing-function: ease-out;
 }
+
 .slide-in-right {
     animation-name: slide-in-right;
     animation-timing-function: ease-out;
 }
 
+.instruct-down-animate {
+    animation: visible-appear-loop infinite;
+    animation-duration: 4.5s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+}
+
 #topHeader {
     text-align: left;
+
     a {
-    display: inline-block;
-    color: darkolivegreen;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 27px;
-    font-weight:600;
-    text-decoration: underline darkseagreen;
-    padding: 18px 25px  15px;
+        display: inline-block;
+        color: darkolivegreen;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 27px;
+        font-weight: 600;
+        text-decoration: underline darkseagreen;
+        padding: 18px 25px 15px;
     }
 }
 
-#myfooter{
-    p{
+#myfooter {
+    p {
         text-align: right;
     }
 }
 
-#introduction{
+#introduction {
 
     display: flex;
     text-align: left;
     justify-content: center;
     min-height: 100vh;
-    p{
+
+    p {
         font-size: 21px;
         line-height: 26px;
         padding: 0px;
         max-width: 450px;
         min-width: 250px;
     }
-    #profile-pic{
+
+    #profile-pic {
         margin-left: 0px;
         margin-right: 50px;
     }
-    img{
+
+    img {
         align-content: center;
         min-width: 250px;
         max-width: 100%;
@@ -173,50 +190,52 @@
         height: auto;
         border-radius: 50px;
         border: 10px solid #244691;
-        object-fit:contain;
+        object-fit: contain;
     }
 }
 
-#instruct-down{
+#instruct-down {
     position: fixed;
     bottom: 0;
-    animation: visible-appear-loop infinite;
-    animation-duration: 4.5s;
-    animation-delay: 2s;
-    animation-timing-function: linear;
-    animation-fill-mode: backwards;   
 }
 
-#project-list{
+.instruct--hidden {
+    opacity: 0;
+}
+
+#project-list {
     display: flex;
     flex-wrap: wrap;
-    h1{
+
+    h1 {
         width: 100%;
     }
 }
 
-#project-icons{
-   img{
-    border: 10px solid #4c7044;;
-    border-radius: 50px;
-   }
+#project-icons {
+    img {
+        border: 10px solid #4c7044;
+        ;
+        border-radius: 50px;
+    }
 }
 
-#socials{
+#socials {
     float: right;
-    
-    a{
+
+    a {
         text-align: center;
         text-decoration: none;
         padding: 0px 20px;
     }
+
     img {
-        
+
         max-width: var(--logoSize);
         max-height: var(--logoSize);
         border: none;
     }
-    
+
 }
 
 .logos {
@@ -227,67 +246,70 @@
     transition: transform 0.25s ease-out;
 }
 
-.logos:hover{
+.logos:hover {
     transform: translateY(-5px);
 }
 
 
 
-.project-blocks{
+.project-blocks {
+    border: 5px solid cadetblue;
+    background-color: #b5c588;
+    /*background-color: rgb(143, 205, 207);*/
+    max-width: 450px;
+    min-width: var(--blockSize);
+    max-height: 500px;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: var(--blockPad);
+    color: rgb(55, 45, 119);
+    margin: 0px auto;
+    width: 50%;
+    margin-bottom: 50px;
+    text-align: center;
+    justify-content: center;
+
+    h2 {
+        margin: 10px var(--blockPad);
+        width: 100%;
+        font-size: 25px;
+    }
+
+    img {
         border: 5px solid cadetblue;
-        background-color: #b5c588;
-        /*background-color: rgb(143, 205, 207);*/
-        max-width: 450px;
-        min-width: var(--blockSize);
-        max-height: 500px;
-        border-radius: 30px;
-        display: flex;
-        flex-wrap: wrap;
-        margin: var(--blockPad);
-        color: rgb(55, 45, 119);
-        margin: 0px auto;
-        width: 50%;
-        margin-bottom: 50px;
-        text-align: center;
-        justify-content: center;
+        border-radius: 25px;
+        width: var(--heightDim);
+        height: var(--heightDim);
+        padding: none;
+        object-fit: cover;
+        margin: 0px 10px 0px 10px;
+    }
 
-        h2 {
-            margin: 10px var(--blockPad);
-            width: 100%;
-            font-size: 25px;
-        }
+    a {
+        text-decoration: none;
+        color: inherit;
 
-        img{
-            border: 5px solid cadetblue;
-            border-radius: 25px;
-            width: var(--heightDim);
-            height: var(--heightDim);
-            padding: none;
-            object-fit: cover;
-            margin: 0px 10px 0px 10px;
-        }
-        a{
-            text-decoration: none;
-            color: inherit;
+    }
 
-        }
+    p {
+        margin-top: 0px;
+        padding-left: var(--blockPad);
+        padding-right: var(--blockPad);
 
-        p{
-            margin-top: 0px;
-            padding-left: var(--blockPad);
-            padding-right: var(--blockPad);
-            
-        }
+    }
 }
+
 
 
 header {
     text-align: center;
     line-height: 45px;
-    
+
 }
-h1{
-    color:var(--header-color);
+
+h1 {
+    color: var(--header-color);
     margin-top: 5px;
     font-size: 55px;
     padding: 0px 0px 30px;
@@ -301,17 +323,17 @@ h2 {
 hr {
     height: 3px;
     color: #333;
-    background-color:#244691;
+    background-color: #244691;
 }
 
 a {
-    color:rgb(139, 177, 85);
+    color: rgb(139, 177, 85);
     font-size: large;
 }
 
 body {
     background-color: var(--bckgrnd-color);
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--main-txt-color);
     font-size: 15px;
     font-weight: 600;
@@ -319,7 +341,7 @@ body {
     line-height: 25px;
 }
 
-figure{
+figure {
     display: inline-block;
     align-items: center;
     text-align: center;
@@ -328,18 +350,20 @@ figure{
 figcaption {
     font-size: 25px;
     padding-bottom: 60px;
-   
+
 }
 
-img{
-    width:var(--heightDim); /* you can use % */
+img {
+    width: var(--heightDim);
+    /* you can use % */
     height: var(--heightDim);
     padding-bottom: 0px;
     object-fit: cover;
 }
 
-video{
-    width:auto; /* you can use % */
+video {
+    width: auto;
+    /* you can use % */
     height: var(--heightDim);
     max-width: 500px;
     max-height: 500px;
