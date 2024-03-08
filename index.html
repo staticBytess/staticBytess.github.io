@@ -28,39 +28,23 @@
             <div id="profile-pic">
                 <img class="animate slide-in-left" src="assets\pro-pic.jpg">
             </div>
-            <p class="animate slide-in-right animate--slow">
-                I am David Vigil, a dedicated computer science student.
-                Currently I am pursuing my bachelor's degree at CSU Sacramento,
-                where I am slated to graduate in December 2025. <br><br>
-                My professional aspirations lie within software engineering,
-                driven by an interest in both information security and embedded systems.<br>
-                This digital portfolio encompasses a diverse array of projects,
-                each crafted to blend software with practical applications.
-            </p>
+            <div class="animate slide-in-right animate--slow">
+                <p>
+                    I am David Vigil, a dedicated computer science student.
+                    Currently I am pursuing my bachelor's degree at CSU Sacramento,
+                    where I am slated to graduate in December 2025. <br><br>
+                    My professional aspirations lie within software engineering,
+                    driven by an interest in both information security and embedded systems.<br>
+                    This digital portfolio encompasses a diverse array of projects,
+                    each crafted to blend software with practical applications.
+                </p>
+            </div>
             <div id="instruct-down" class="instruct-down-animate">
                 <p>
                     scroll for more
                 </p>
             </div>
         </div>
-
-        <script>
-            const instruct = document.querySelector("#instruct-down");
-            let lastScrollY = window.scrollY;
-
-            window.addEventListener("scroll", () => {
-                if (lastScrollY != window.scrollY) {
-                    instruct.classList.remove("instruct-down-animate");
-                    instruct.classList.add("instruct--hidden");
-
-                } else {
-                    instruct.classList.add("instruct-down-animate")
-                    instruct.classList.remove("instruct--hidden");
-                }
-            })
-
-        </script>
-
 
         <hr>
 
@@ -108,11 +92,25 @@
                 </p>
             </div>
         </div>
-
-
     </body>
 </main>
 
+<script>
+    const instruct = document.querySelector("#instruct-down");
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+        if (lastScrollY != window.scrollY) {
+            instruct.classList.remove("instruct-down-animate");
+            instruct.classList.add("instruct--hidden");
+
+        } else {
+            instruct.classList.add("instruct-down-animate")
+            instruct.classList.remove("instruct--hidden");
+        }
+    })
+
+</script>
 
 
 <footer>
