@@ -326,11 +326,6 @@ hr {
     background-color: #244691;
 }
 
-a {
-    color: rgb(139, 177, 85);
-    font-size: large;
-}
-
 body {
     background-color: var(--bckgrnd-color);
     font-family: Arial, Helvetica, sans-serif;
