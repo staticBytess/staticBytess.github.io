@@ -168,12 +168,13 @@
     text-align: left;
     justify-content: center;
     min-height: 100vh;
+    min-width: 600px;
 
     p {
-        font-size: 21px;
-        line-height: 26px;
+        font-size: 35px;
+        line-height: 38px;
         padding: 0px;
-        max-width: 450px;
+        max-width: 650px;
         min-width: 250px;
     }
 
@@ -184,9 +185,8 @@
 
     img {
         align-content: center;
-        min-width: 250px;
+        min-width: 550px;
         max-width: 100%;
-        width: auto\9;
         height: auto;
         border-radius: 50px;
         border: 10px solid #244691;
@@ -256,9 +256,9 @@
     border: 5px solid cadetblue;
     background-color: #b5c588;
     /*background-color: rgb(143, 205, 207);*/
-    max-width: 450px;
+    max-width: 480px;
     min-width: var(--blockSize);
-    max-height: 500px;
+    max-height: 530px;
     border-radius: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -300,7 +300,9 @@
     }
 }
 
-
+.more-space {
+    padding-top: 15px;
+}
 
 header {
     text-align: center;
@@ -311,7 +313,7 @@ header {
 h1 {
     color: var(--header-color);
     margin-top: 5px;
-    font-size: 55px;
+    font-size: 100px;
     padding: 0px 0px 30px;
     text-align: center;
 }
@@ -328,12 +330,12 @@ hr {
 
 body {
     background-color: var(--bckgrnd-color);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Tanker';
     color: var(--main-txt-color);
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 600;
     padding: 15px 0px;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 figure {
@@ -363,4 +365,47 @@ video {
     max-width: 500px;
     max-height: 500px;
     padding-bottom: 0px;
+}
+
+/*Font Styling*/
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lato-bold-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.lato-black-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.madimi-one-regular {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
