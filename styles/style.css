@@ -4,15 +4,13 @@
     --logoSize: 50px;
     --blockSize: 380px;
     --blockPad: 10px;
-    --bckgrnd-color: mintcream;
-    --header-color: peru;
-    --main-txt-color: darkslateblue;
-    --img-border-color: #244691;
-    --block-border-color: cadetblue;
-    --block-bckgrnd-color: #b5c588;
-    --block-txt-color: rgb(55, 45, 119);
-
-
+    --bckgrnd-color: #C9E0EA;
+    --header-color: #455399;
+    --main-txt-color: #535353;
+    --img-border-color: rgb(175, 175, 175);
+    --block-border-color: rgb(175, 175, 175);
+    --block-bckgrnd-color: #ececec;
+    --block-txt-color: #535353;
 }
 
 /*Animation Functions*/
