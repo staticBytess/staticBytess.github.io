@@ -171,7 +171,7 @@
     min-width: 600px;
 
     p {
-        font-size: 35px;
+        font-size: 25px;
         line-height: 38px;
         padding: 0px;
         max-width: 650px;
@@ -185,7 +185,7 @@
 
     img {
         align-content: center;
-        min-width: 550px;
+        min-width: 350px;
         max-width: 100%;
         height: auto;
         border-radius: 50px;
@@ -313,7 +313,7 @@ header {
 h1 {
     color: var(--header-color);
     margin-top: 5px;
-    font-size: 100px;
+    font-size: 75px;
     padding: 0px 0px 30px;
     text-align: center;
 }
