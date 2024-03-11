@@ -7,6 +7,12 @@
     --bckgrnd-color: mintcream;
     --header-color: peru;
     --main-txt-color: darkslateblue;
+    --img-border-color: #244691;
+    --block-border-color: cadetblue;
+    --block-bckgrnd-color: #b5c588;
+    --block-txt-color: rgb(55, 45, 119);
+
+
 }
 
 /*Animation Functions*/
@@ -189,7 +195,7 @@
         max-width: 100%;
         height: auto;
         border-radius: 50px;
-        border: 10px solid #244691;
+        border: 10px solid var(--img-border-color);
         object-fit: contain;
     }
 }
@@ -209,14 +215,6 @@
 
     h1 {
         width: 100%;
-    }
-}
-
-#project-icons {
-    img {
-        border: 10px solid #4c7044;
-        ;
-        border-radius: 50px;
     }
 }
 
@@ -253,8 +251,8 @@
 
 
 .project-blocks {
-    border: 5px solid cadetblue;
-    background-color: #b5c588;
+    border: 5px solid var(--block-border-color);
+    background-color: var(--block-bckgrnd-color);
     /*background-color: rgb(143, 205, 207);*/
     max-width: 480px;
     min-width: var(--blockSize);
@@ -263,7 +261,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: var(--blockPad);
-    color: rgb(55, 45, 119);
+    color: var(--block-txt-color);
     margin: 0px auto;
     width: 50%;
     margin-bottom: 50px;
@@ -274,11 +272,10 @@
         margin: 10px var(--blockPad);
         width: 100%;
         font-size: 35px;
-        font-weight: ;
     }
 
     img {
-        border: 5px solid cadetblue;
+        border: 5px solid var(--block-border-color);
         border-radius: 25px;
         width: var(--heightDim);
         height: var(--heightDim);
@@ -326,12 +323,11 @@ h2 {
 hr {
     height: 3px;
     color: #333;
-    background-color: #244691;
+    background-color: var(--main-txt-color);
 }
 
 body {
     background-color: var(--bckgrnd-color);
-    font-family: 'Tanker';
     color: var(--main-txt-color);
     font-size: 25px;
     font-weight: 600;
