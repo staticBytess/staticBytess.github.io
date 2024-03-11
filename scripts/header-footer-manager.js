@@ -17,7 +17,7 @@ class myHeader extends HTMLElement {
 class myFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <div id="myfooter">
+        <div id="myfooter" class="lato-regular">
             <footer>
                 <p>Developed by David Vigil</p>
             </footer>
