@@ -192,7 +192,8 @@
         min-width: 350px;
         max-width: 100%;
         height: auto;
-        border-radius: 50px;
+        /*border-radius: 50px;*/
+        border-radius: 16% 84% 12% 88% / 92% 12% 88% 8%;
         border: 10px solid var(--img-border-color);
         object-fit: contain;
     }
@@ -403,4 +404,95 @@ video {
     font-family: "Madimi One", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+
+/*Clouds*/
+
+#clouds {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 50px;
+    position: fixed;
+    z-index: -1;
+}
+
+/* Animations */
+@keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+.first-cloud {
+    animation: animateCloud 25s cubic-bezier(.44, .65, .68, .6) infinite;
+    transform: scale(0.40);
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+.second-cloud {
+    animation: animateCloud 20s linear infinite;
+    transform: scale(0.32);
+}
+
+.third-cloud {
+    animation: animateCloud 30s cubic-bezier(.59, .52, .62, .67) infinite;
+    transform: scale(0.45);
+    animation-delay: 5s;
+    animation-fill-mode: both;
+}
+
+.fourth-cloud {
+    animation: animateCloud 21s linear infinite;
+    transform: scale(0.4);
+    animation-delay: 3.5s;
+    animation-fill-mode: both;
+}
+
+.fifth-cloud {
+    animation: animateCloud 26s linear infinite;
+    transform: scale(0.55);
+    animation-delay: 3.5s;
+    animation-fill-mode: both;
+}
+
+/* Objects */
+.cloud {
+    background: white;
+    border-radius: 100px;
+    box-shadow: 10px 8px 5px rgb(0, 0, 0, 0.15);
+    height: 80px;
+    position: relative;
+    width: 310px;
+}
+
+.cloud:after,
+.cloud:before {
+    background: white;
+    content: '';
+    position: absolute;
+    z-indeX: -1;
+}
+
+.cloud:after {
+    border-radius: 100px;
+    height: 100px;
+    left: 50px;
+    top: -50px;
+    width: 110px;
+}
+
+.cloud:before {
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    right: 35px;
+    top: -90px;
 }
