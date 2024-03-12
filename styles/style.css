@@ -423,10 +423,17 @@ video {
 @keyframes animateCloud {
     0% {
         margin-left: -1000px;
+        opacity: 0;
+    }
+
+    15%,
+    85% {
+        opacity: 1;
     }
 
     100% {
         margin-left: 100%;
+        opacity: 0;
     }
 }
 
