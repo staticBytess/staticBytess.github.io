@@ -297,6 +297,9 @@
     }
 }
 
+/*add hover effect*/
+.project-blocks:hover {}
+
 .more-space {
     padding-top: 15px;
 }
@@ -438,33 +441,33 @@ video {
 }
 
 .first-cloud {
-    animation: animateCloud 25s cubic-bezier(.44, .65, .68, .6) infinite;
+    animation: animateCloud 30s cubic-bezier(.44, .65, .68, .6) infinite;
     transform: scale(0.40);
     animation-delay: 2s;
     animation-fill-mode: both;
 }
 
 .second-cloud {
-    animation: animateCloud 20s linear infinite;
+    animation: animateCloud 25s linear infinite;
     transform: scale(0.32);
 }
 
 .third-cloud {
-    animation: animateCloud 30s cubic-bezier(.59, .52, .62, .67) infinite;
+    animation: animateCloud 35s cubic-bezier(.59, .52, .62, .67) infinite;
     transform: scale(0.45);
     animation-delay: 5s;
     animation-fill-mode: both;
 }
 
 .fourth-cloud {
-    animation: animateCloud 21s linear infinite;
+    animation: animateCloud 26s linear infinite;
     transform: scale(0.4);
     animation-delay: 3.5s;
     animation-fill-mode: both;
 }
 
 .fifth-cloud {
-    animation: animateCloud 26s linear infinite;
+    animation: animateCloud 31s linear infinite;
     transform: scale(0.55);
     animation-delay: 3.5s;
     animation-fill-mode: both;
