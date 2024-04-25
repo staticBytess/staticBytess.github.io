@@ -1,6 +1,6 @@
 /*Global variables*/
 :root {
-    --heightDim: 350px;
+    --heightDim: 400px;
     --logoSize: 50px;
     --blockSize: 380px;
     --blockPad: 10px;
@@ -11,6 +11,11 @@
     --block-border-color: rgb(175, 175, 175);
     --block-bckgrnd-color: #ececec;
     --block-txt-color: #535353;
+}
+
+::selection {
+    color: var(--header-color);
+    background: rgb(235, 235, 114);
 }
 
 /*Animation Functions*/
@@ -294,6 +299,7 @@
         padding-left: var(--blockPad);
         padding-right: var(--blockPad);
         font-size: 21px;
+        max-width: calc(var(--heightDim)+25px);
     }
 }
 
