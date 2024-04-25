@@ -117,6 +117,10 @@
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
+.glow:hover {
+    animation-name: none;
+    /* Remove the glow animation on hover */
+}
 .animate {
     animation-duration: 1.25s;
     animation-fill-mode: both;

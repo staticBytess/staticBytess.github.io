@@ -60,7 +60,7 @@
             
                 <h2>Recipe Keeper Web App</h2>
             
-                <a href="https://recipe-app-fy4j.onrender.com"><img src="assets\other-projs\webapp-scrnshot.png" class="glow"></a>
+                <a href="https://recipe-app-fy4j.onrender.com"><img src="assets\other-projs\webapp-scrnshot.png" class="glow" id="imgGlow"></a>
             
                 <p>
                     Team based web app project to browse and save recipes.
@@ -136,6 +136,7 @@
 
 <script>
     const instruct = document.querySelector("#instruct-down");
+    const image = document.getElementById('imgGlow');
     let lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", () => {
@@ -148,6 +149,12 @@
             instruct.classList.remove("instruct--hidden");
         }
     })
+
+    function removeGlow() {
+            image.classList.remove('glow');
+        }
+    image.addEventListener('mouseover', removeGlow);
+
 
 </script>
 
