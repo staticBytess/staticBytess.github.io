@@ -99,7 +99,24 @@
     }
 }
 
+@keyframes glow-loop {
+
+    0%, 100%{
+        border-color: rgb(15, 117, 201);
+    }
+
+    50% {
+        border-color: var(--img-border-color);
+    }
+}
+
 /*Utility Clases*/
+
+.glow{
+    animation-name: glow-loop;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
 .animate {
     animation-duration: 1.25s;
     animation-fill-mode: both;
@@ -286,6 +303,10 @@
         padding: none;
         object-fit: cover;
         margin: 0px 10px 0px 10px;
+        transition: transform 0.25s ease-out;
+    }
+    img:hover {
+        transform: translateY(-3px);
     }
 
     a {
