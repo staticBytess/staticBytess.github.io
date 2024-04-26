@@ -2,7 +2,7 @@
 :root {
     --heightDim: 400px;
     --logoSize: 50px;
-    --blockSize: 380px;
+    --blockSize: 430px;
     --blockPad: 10px;
     --bckgrnd-color: #C9E0EA;
     --header-color: #455399;
@@ -101,12 +101,13 @@
 
 @keyframes glow-loop {
 
-    0%, 100%{
-        border-color: rgb(15, 117, 201);
+    0%, 70%{
+        border-color: var(--img-border-color);
     }
 
     50% {
-        border-color: var(--img-border-color);
+        border-color: rgb(15, 117, 201);
+        
     }
 }
 
@@ -114,7 +115,7 @@
 
 .glow{
     animation-name: glow-loop;
-    animation-duration: 5s;
+    animation-duration: 3.75s;
     animation-iteration-count: infinite;
 }
 .glow:hover {
