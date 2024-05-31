@@ -3,6 +3,8 @@
     --heightDim: 400px;
     --logoSize: 50px;
     --blockSize: 430px;
+    --extraBlockSize:750px;
+    --description-width: 250px;
     --blockPad: 10px;
     --bckgrnd-color: #C9E0EA;
     --header-color: #455399;
@@ -178,12 +180,11 @@
 
     a {
         display: inline-block;
-        color: darkolivegreen;
-        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(0, 0, 0);
         font-size: 27px;
         font-weight: 600;
-        text-decoration: underline darkseagreen;
-        padding: 18px 25px 15px;
+        text-decoration: none;
+        padding: 10px 25px 0px;
     }
 }
 
@@ -329,8 +330,76 @@
     }
 }
 
-/*add hover effect*/
-.project-blocks:hover {}
+.project-blocks-extended {
+    border: 5px solid var(--block-border-color);
+    background-color: var(--block-bckgrnd-color);
+    /*background-color: rgb(143, 205, 207);*/
+    max-width: 780px;
+    min-width: var(--extraBlockSize);
+    max-height: 530px;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: var(--blockPad);
+    color: var(--block-txt-color);
+    margin: 0px auto;
+    width: 50%;
+    margin-bottom: 50px;
+    text-align: center;
+    justify-content: center;
+
+    h2 {
+        margin: 10px var(--blockPad);
+        width: 100%;
+        font-size: 35px;
+    }
+
+    img {
+        border: 5px solid var(--block-border-color);
+        border-radius: 25px;
+        width: var(--heightDim);
+        height: var(--heightDim);
+        padding: none;
+        object-fit: cover;
+        margin: 0px 10px 0px 10px;
+        text-align: left;
+    }
+
+    a:hover {
+        transform: translateY(-3px);
+    }
+
+    a {
+        transition: transform 0.25s ease-out;
+        text-decoration: none;
+        color: inherit;
+
+    }
+
+    p {
+        margin-top: 0px;
+        padding-left: var(--blockPad);
+        padding-right: var(--blockPad);
+        font-size: 21px;
+        min-width: calc(var(--extraBlockSize)-100);
+        max-width: calc(var(--extraBlockSize)/2+150);
+    }
+}
+
+.project-body{
+    display: flex;
+    p{
+        text-align: left;
+    }
+    i, b{
+        font-size: 23px
+    }
+}
+
+.columns {
+    display: flex;
+    flex-direction: column;
+}
 
 .more-space {
     padding-top: 15px;
@@ -373,11 +442,12 @@ figure {
     display: inline-block;
     align-items: center;
     text-align: center;
+    margin: 0px;
 }
 
 figcaption {
     font-size: 25px;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
 
 }
 
