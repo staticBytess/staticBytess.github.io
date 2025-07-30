@@ -7,11 +7,14 @@
          */
         const extractNumber = (text) => {
             if (!text) return '';
-            const match = text.match(/[\d,.]+/); // Updated to include decimals
+            const match = text.match(/[\d,.]+/); // Includes decimals
             return match ? parseFloat(match[0].replace(/,/g, '')) : '';
         };
 
         // --- 1. Scrape Data from the DOM ---
+
+        // Vineyard is left blank; the Apps Script will match based on the Block name.
+        const vineyard = '';
 
         const blockNameElem = document.querySelector('h1.text-xl span.font-bold');
         const blockName = blockNameElem ? blockNameElem.innerText.trim() : '';
@@ -34,28 +37,11 @@
             .find(el => el.textContent.includes('Vines Missing'));
         const missingVines = extractNumber(missingVinesLabel?.nextElementSibling?.innerText ?? '');
 
-        // --- 2. Prompt User for Missing Information ---
-
-        // Prompt for Vineyard, as it's not available on the page
-        const vineyard = prompt('Please enter the Vineyard name:');
-        if (!vineyard) {
-            alert('Vineyard name is required. Aborting.');
-            return;
-        }
-
-        const camNumber = prompt('Which camera pass is this? Enter 1 or 2:');
-        if (!['1', '2'].includes(camNumber)) {
-            alert('Invalid camera number. Please enter 1 or 2. Aborting.');
-            return;
-        }
-        const cam = `cam${camNumber}`; // Simplified to 'cam1' or 'cam2'
-
-        // --- 3. Construct a Clean Data Payload ---
-        // This simplified structure is easier for the Google Apps Script to handle.
+        // --- 2. Construct a Clean Data Payload ---
+        // The 'cam' property is removed. The Apps Script will handle the logic.
         const payload = {
             vineyard: vineyard,
             block: blockName,
-            cam: cam, // 'cam1' or 'cam2'
             clusters: clustersCounted,
             clustersPerVine: clustersPerVine,
             missingVines: missingVines,
@@ -64,10 +50,9 @@
         };
 
         console.log('Parsed Data Payload:', payload);
-        alert('Data extracted successfully! Sending to Google Sheet...');
+        alert('Data extracted. Sending to Google Sheet for processing...');
 
-        // --- 4. Expose a Function to Send the Data ---
-        // This function will be called by your private bookmarklet loader.
+        // --- 3. Expose a Function to Send the Data ---
         window.sendVineyardData = function (url) {
             if (!url) {
                 alert('Error: No Google Apps Script URL was provided.');
@@ -79,7 +64,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(payload) // Send the clean payload
+                body: JSON.stringify(payload)
             })
                 .then(response => {
                     if (response.ok) {
