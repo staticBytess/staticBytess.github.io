@@ -1,13 +1,20 @@
 (function () {
     try {
+        /**
+         * Extracts the first numerical value from a string.
+         * @param {string} text - The text to parse.
+         * @returns {number|string} - The parsed number or an empty string if not found.
+         */
         const extractNumber = (text) => {
-            const match = text.match(/[\d,]+/);
-            return match ? parseInt(match[0].replace(/,/g, ''), 10) : '';
+            if (!text) return '';
+            const match = text.match(/[\d,.]+/); // Updated to include decimals
+            return match ? parseFloat(match[0].replace(/,/g, '')) : '';
         };
+
+        // --- 1. Scrape Data from the DOM ---
 
         const blockNameElem = document.querySelector('h1.text-xl span.font-bold');
         const blockName = blockNameElem ? blockNameElem.innerText.trim() : '';
-        const vineyard = '';
 
         const acresElem = Array.from(document.querySelectorAll('span'))
             .find(el => el.textContent.includes('Acreage'))?.nextElementSibling;
@@ -27,35 +34,43 @@
             .find(el => el.textContent.includes('Vines Missing'));
         const missingVines = extractNumber(missingVinesLabel?.nextElementSibling?.innerText ?? '');
 
-        const camNumber = prompt('Which camera pass is this? Enter 1 or 2:');
-        if (!['1', '2'].includes(camNumber)) {
-            alert('Invalid camera number. Enter 1 or 2.');
+        // --- 2. Prompt User for Missing Information ---
+
+        // Prompt for Vineyard, as it's not available on the page
+        const vineyard = prompt('Please enter the Vineyard name:');
+        if (!vineyard) {
+            alert('Vineyard name is required. Aborting.');
             return;
         }
 
-        const row = {
-            Vineyard: vineyard,
-            Block: blockName,
-            [`Cam ${camNumber} clusters counted`]: clustersCounted,
-            [`Cam ${camNumber} clusters/vine`]: clustersPerVine,
-            [`Cam ${camNumber} missing vines`]: missingVines,
-            'total counted clusters': '',
-            'average clusters per vine': '',
-            'Callibrated Y / N': calibrated,
-            'GTS Y/N': '',
-            'Scanned Acres': scannedAcres
+        const camNumber = prompt('Which camera pass is this? Enter 1 or 2:');
+        if (!['1', '2'].includes(camNumber)) {
+            alert('Invalid camera number. Please enter 1 or 2. Aborting.');
+            return;
+        }
+        const cam = `cam${camNumber}`; // Simplified to 'cam1' or 'cam2'
+
+        // --- 3. Construct a Clean Data Payload ---
+        // This simplified structure is easier for the Google Apps Script to handle.
+        const payload = {
+            vineyard: vineyard,
+            block: blockName,
+            cam: cam, // 'cam1' or 'cam2'
+            clusters: clustersCounted,
+            clustersPerVine: clustersPerVine,
+            missingVines: missingVines,
+            acres: scannedAcres,
+            calibrated: calibrated
         };
 
-        console.log('Parsed row:', row);
-        alert('Data extracted. See console (F12) for results.');
+        console.log('Parsed Data Payload:', payload);
+        alert('Data extracted successfully! Sending to Google Sheet...');
 
-        // Expose a function on window to get the extracted data
-        window.__vineyardData = row;
-
-        // Expose a function to send the data to a URL
+        // --- 4. Expose a Function to Send the Data ---
+        // This function will be called by your private bookmarklet loader.
         window.sendVineyardData = function (url) {
             if (!url) {
-                alert('No URL provided to send data.');
+                alert('Error: No Google Apps Script URL was provided.');
                 return;
             }
             fetch(url, {
@@ -64,22 +79,25 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(row)
+                body: JSON.stringify(payload) // Send the clean payload
             })
                 .then(response => {
                     if (response.ok) {
-                        alert('Data sent successfully!');
+                        alert('Data sent to Google Sheet successfully!');
                     } else {
-                        alert('Failed to send data. Status: ' + response.status);
+                        response.text().then(text => {
+                            alert('Failed to send data. Status: ' + response.status + '\nResponse: ' + text);
+                        });
                     }
                 })
                 .catch(err => {
-                    alert('Error sending data: ' + err.message);
+                    console.error('Error sending data:', err);
+                    alert('An error occurred while sending data: ' + err.message);
                 });
         };
 
     } catch (e) {
         console.error('Error extracting data:', e);
-        alert('An error occurred. Check console for details.');
+        alert('A critical error occurred while running the bookmarklet. Check the console (F12) for details.');
     }
 })();
